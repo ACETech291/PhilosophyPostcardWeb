@@ -24,10 +24,10 @@ Dự án này không chỉ là một trang web tĩnh để dẫn link, mà còn 
 
 Dự án được xây dựng hoàn toàn bằng các công nghệ Front-end cơ bản, không cần cài đặt phức tạp, có thể chạy trực tiếp ngay trên trình duyệt:
 
-- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) **HTML5** & **Vanilla JavaScript**
-- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) **Tailwind CSS** (via CDN)
-- ![Font Awesome](https://img.shields.io/badge/Font_Awesome_6-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white) **Font Awesome 6** (Icons)
-- ![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white) **Google Fonts**
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- ![Font Awesome](https://img.shields.io/badge/Font_Awesome_6-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)
+- ![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white)
 
 ---
 
