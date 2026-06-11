@@ -207,12 +207,12 @@
           <a
             href="#listen"
             class="hover:text-amber-600 dark:hover:text-amber-500 transition duration-300"
-            >Trang chủ</a
+            >Nền Tảng</a
           >
           <a
             href="#reader-section"
             class="text-amber-600 dark:text-amber-500 transition duration-300"
-            >Đọc & Nghe Sách Nói</a
+            >Đọc & Nghe Sách</a
           >
         </div>
 
@@ -267,7 +267,10 @@
             </p>
             <div class="h-[1px] w-24 bg-amber-700/50 mx-auto"></div>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+          <!-- Sửa lại grid từ 3 cột thành 2 cột và căn giữa (max-w-2xl mx-auto) -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto"
+          >
             <a
               href="https://youtube.com"
               target="_blank"
@@ -286,26 +289,6 @@
                 class="text-xs text-stone-600 dark:text-stone-400 italic transition-colors"
               >
                 Trải nghiệm hình ảnh
-              </p>
-            </a>
-            <a
-              href="https://spotify.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group flex flex-col items-center p-6 glass hover:bg-stone-200 dark:hover:bg-stone-900 border border-stone-300 dark:border-stone-800 hover:border-amber-600/50 transition-all duration-500 transform hover:-translate-y-1"
-            >
-              <i
-                class="fa-brands fa-spotify text-4xl mb-3 text-stone-500 dark:text-stone-600 group-hover:text-[#1DB954] transition-colors duration-500"
-              ></i>
-              <h3
-                class="text-lg font-bold mb-1 heading-font tracking-wide text-stone-800 dark:text-stone-200 transition-colors"
-              >
-                Spotify
-              </h3>
-              <p
-                class="text-xs text-stone-600 dark:text-stone-400 italic transition-colors"
-              >
-                Không gian âm thanh
               </p>
             </a>
             <a
@@ -339,7 +322,7 @@
       >
         <!-- Table of Contents (Sidebar) -->
         <aside
-          class="w-full md:w-1/4 glass p-6 rounded-xl border border-stone-300 dark:border-stone-800 sticky top-24 z-40 transition-colors"
+          class="w-full md:w-1/4 glass p-6 rounded-xl border border-stone-300 dark:border-stone-800 md:sticky md:top-24 z-40 transition-colors"
         >
           <h3
             class="text-xl text-amber-600 dark:text-amber-500 heading-font font-bold mb-4 border-b border-stone-300 dark:border-stone-700 pb-3 transition-colors"
@@ -406,7 +389,7 @@
 
         <!-- Main Reading Content -->
         <div
-          class="w-full md:w-3/4 text-stone-800 dark:text-stone-300 text-lg leading-loose bg-stone-50/80 dark:bg-stone-900/30 p-6 md:p-10 rounded-xl border border-stone-300 dark:border-stone-800/50 shadow-xl transition-colors"
+          class="w-full md:w-3/4 text-stone-800 dark:text-stone-300 text-lg leading-loose bg-stone-50/80 dark:bg-stone-900/30 p-6 md:p-10 rounded-xl border border-stone-300 dark:border-stone-800/50 shadow-xl transition-colors scroll-mt-24"
           id="story-container"
         >
           <!-- Phần 1 -->
@@ -509,9 +492,7 @@
               bìa da nâu mà Triết chưa bao giờ nhìn kỹ. Cậu chỉ biết ông nội hay
               ngồi đó vào buổi tối, viết gì đó bằng bút mực xanh, rồi gấp lại.
             </p>
-            <p class="mb-6 text-amber-600 dark:text-amber-500 italic">
-              Mùa hè bắt đầu.
-            </p>
+            <p class="mb-6">Mùa hè bắt đầu.</p>
           </article>
 
           <!-- Phần 2 -->
@@ -653,9 +634,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -674,9 +655,7 @@
                   vật chất đó.
                 </p>
                 <p>Cháu tám tuổi đã tự tìm ra điều này.</p>
-                <p class="text-amber-700 dark:text-amber-600/80">
-                  Ông nghĩ cháu sẽ đi xa lắm.
-                </p>
+                <p>Ông nghĩ cháu sẽ đi xa lắm.</p>
               </div>
             </div>
           </article>
@@ -812,9 +791,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -836,7 +815,7 @@
                 <p>
                   Người ta gọi đây là: lượng đổi dần dần, đến lúc chất thay đổi.
                 </p>
-                <p class="text-amber-700 dark:text-amber-600/80">
+                <p>
                   Điều quan trọng là đừng bỏ củi đi khi ấm đang ở chín mươi chín
                   độ.
                 </p>
@@ -973,9 +952,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -996,7 +975,7 @@
                   rằng nếu mọi thứ đều thay đổi, thì ta vẫn phải chịu trách
                   nhiệm.
                 </p>
-                <p class="text-amber-700 dark:text-amber-600/80">
+                <p>
                   Dù mọi thứ đều thay đổi, vẫn có một cái gì đó chạy xuyên suốt
                   — như lòng sông giữ cho nước chảy đúng hướng dù nước thay đổi
                   mỗi giây. Cái chạy xuyên suốt đó chính là ta.
@@ -1133,9 +1112,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -1159,9 +1138,7 @@
                   Triết hiểu theo cách của Triết: giống ông cãi nhau với Bác
                   Hiền.
                 </p>
-                <p class="text-amber-700 dark:text-amber-600/80">
-                  Cháu đúng hơn ông nghĩ.
-                </p>
+                <p>Cháu đúng hơn ông nghĩ.</p>
               </div>
             </div>
           </article>
@@ -1285,9 +1262,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -1310,9 +1287,7 @@
                   Nhưng với câu hỏi của Triết — Cám trở thành gì — ông trả lời
                   bằng tình cảm, không bằng Triết học.
                 </p>
-                <p class="text-amber-700 dark:text-amber-600/80">
-                  Đôi khi đó mới là câu trả lời đúng nhất.
-                </p>
+                <p>Đôi khi đó mới là câu trả lời đúng nhất.</p>
               </div>
             </div>
           </article>
@@ -1440,9 +1415,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -1458,9 +1433,7 @@
                 <p>Cái ngẫu nhiên là những gì xảy ra trên đường đi đó.</p>
                 <p>Người ta gọi đây là: tất nhiên và ngẫu nhiên.</p>
                 <p>Triết gọi nó là: học bài thi và chuẩn bị áo mưa.</p>
-                <p class="text-amber-700 dark:text-amber-600/80">
-                  Ông thấy cách của Triết dễ nhớ hơn.
-                </p>
+                <p>Ông thấy cách của Triết dễ nhớ hơn.</p>
               </div>
             </div>
           </article>
@@ -1602,9 +1575,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -1633,9 +1606,7 @@
                   Triết hiểu điều này khi con cá nhỏ vẫy đuôi trong tay cậu.
                 </p>
                 <p>Không ai giải thích được khoảnh khắc đó.</p>
-                <p class="text-amber-700 dark:text-amber-600/80">
-                  Đó chính là điểm Triết học gặp gỡ cuộc sống.
-                </p>
+                <p>Đó chính là điểm Triết học gặp gỡ cuộc sống.</p>
               </div>
             </div>
           </article>
@@ -1735,9 +1706,9 @@
               class="relative my-12 p-8 border border-stone-300 dark:border-stone-700 bg-stone-100/60 dark:bg-stone-900/40 rounded-sm transition-colors"
             >
               <div
-                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-stone-50 dark:bg-stone-950 px-4 text-amber-600 dark:text-amber-500 text-sm tracking-widest font-semibold heading-font transition-colors"
+                class="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-stone-50 dark:bg-stone-950 px-3 sm:px-4 text-amber-600 dark:text-amber-500 text-xs sm:text-sm tracking-widest font-semibold heading-font transition-colors"
               >
-                ✦ &nbsp; CUỐN SỔ CỦA ÔNG &nbsp; ✦
+                ✦ CUỐN SỔ CỦA ÔNG ✦
               </div>
               <div
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
@@ -1770,7 +1741,7 @@
                 <p>Mà vì cháu thấy tò mò.</p>
                 <p>Đó chính là Triết học rồi.</p>
                 <p>Ông không biết sau này cháu sẽ làm gì.</p>
-                <p class="text-amber-700 dark:text-amber-600/80">
+                <p>
                   Nhưng ông biết rằng người nào còn giữ được thói quen hỏi tại
                   sao — người đó sẽ không bao giờ nhìn thế giới mà thấy nhàm
                   chán.
@@ -1899,14 +1870,12 @@
       </a>
     </footer>
 
-    <!-- JavaScript for SPA Navigation and Theme Toggle -->
+    <!-- JavaScript for SPA Navigation, Theme Toggle and Smart Audio -->
     <script>
       // --- THEME TOGGLE LOGIC ---
-      // Setup initial theme based on localStorage
       if (localStorage.theme === "light") {
         document.documentElement.classList.remove("dark");
       } else {
-        // Default to dark theme as requested originally
         document.documentElement.classList.add("dark");
       }
 
@@ -1929,14 +1898,14 @@
         }
       }
 
-      // Cập nhật icon lúc mới tải trang
       window.addEventListener("DOMContentLoaded", updateThemeIcon);
 
-      // --- CHAPTER NAVIGATION LOGIC ---
+      // --- CHAPTER NAVIGATION & SMART AUDIO LOGIC ---
       let currentChapter = 1;
       const totalChapters = 9;
 
-      function changeChapter(target) {
+      // Hàm này nhận thêm tham số autoPlayNext (Mặc định là false)
+      function changeChapter(target, autoPlayNext = false) {
         if (target === "next" && currentChapter < totalChapters) {
           currentChapter++;
         } else if (target === "prev" && currentChapter > 1) {
@@ -1970,7 +1939,7 @@
           }
         });
 
-        // Cập nhật trạng thái nút Prev/Next đơn giản hóa với disabled logic
+        // Cập nhật trạng thái nút Prev/Next
         const btnPrev = document.getElementById("btn-prev");
         const btnNext = document.getElementById("btn-next");
 
@@ -1978,10 +1947,38 @@
         btnNext.disabled = currentChapter === totalChapters;
 
         // Cuộn lên đầu vùng đọc sách mượt mà
-        document
-          .getElementById("reader-section")
-          .scrollIntoView({ behavior: "smooth" });
+        const scrollTarget =
+          window.innerWidth < 768
+            ? document.getElementById("story-container")
+            : document.getElementById("reader-section");
+        scrollTarget.scrollIntoView({ behavior: "smooth" });
+
+        // Tự động phát âm thanh nếu được yêu cầu (nhờ người nghe audio tự chạy xong)
+        if (autoPlayNext) {
+          const nextAudio = document.getElementById("audio-" + currentChapter);
+          if (nextAudio) {
+            // Dùng setTimeout nhỏ để giao diện kịp chuyển trước khi bắt đầu play
+            setTimeout(() => {
+              nextAudio
+                .play()
+                .catch((e) => console.log("Trình duyệt chặn autoplay:", e));
+            }, 100);
+          }
+        }
       }
+
+      // Đăng ký sự kiện lắng nghe audio kết thúc để tự động chuyển bài thông minh
+      window.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("audio").forEach((audio) => {
+          audio.addEventListener("ended", () => {
+            // Khi audio phát hết, hệ thống tự động chuyển chương tiếp theo
+            // và ra lệnh autoplay cho trang web = true
+            if (currentChapter < totalChapters) {
+              changeChapter(currentChapter + 1, true);
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
