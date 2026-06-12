@@ -4,28 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mùa Hè Bên Bờ Sông Triết Học - Tâm Thức Podcast</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tailwind Config for Dark Mode & Fonts -->
     <script>
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             fontFamily: {
-              // Ép class font-serif sử dụng Lora để tránh lỗi tách dấu tiếng Việt
               serif: ["Lora", "serif"],
             },
           },
         },
       };
     </script>
-    <!-- FontAwesome for Brand Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Google Fonts: Lora & Playfair Display -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
       rel="stylesheet"
@@ -40,24 +35,24 @@
 
       /* Light Theme Background */
       html:not(.dark) body {
-        background-color: #f5f5f4; /* stone-50 */
+        background-color: #f5f5f4;
         background-image: radial-gradient(
           circle at top center,
           #e7e5e4,
           #f5f5f4
         );
-        color: #292524; /* stone-800 */
+        color: #292524;
       }
 
       /* Dark Theme Background */
       html.dark body {
-        background-color: #0c0a09; /* stone-950 */
+        background-color: #0c0a09;
         background-image: radial-gradient(
           circle at top center,
           #1c1917,
           #0c0a09
         );
-        color: #d6d3d1; /* stone-300 */
+        color: #d6d3d1;
       }
 
       h1,
@@ -68,40 +63,12 @@
         font-family: "Playfair Display", serif;
       }
 
-      /* Float animation */
-      .float {
-        animation: floating 6s ease-in-out infinite;
-      }
-      @keyframes floating {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      /* Glassmorphism */
-      html:not(.dark) .glass {
-        background: rgba(245, 245, 244, 0.7);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(217, 119, 6, 0.2);
-      }
-      html.dark .glass {
-        background: rgba(28, 25, 23, 0.7);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(217, 119, 6, 0.15);
-      }
-
       /* Drop cap for first paragraph */
       .drop-cap::first-letter {
         font-family: "Playfair Display", serif;
         font-size: 4rem;
         font-weight: bold;
-        color: #d97706; /* amber-600 */
+        color: #d97706;
         float: left;
         margin-right: 0.75rem;
         line-height: 1;
@@ -169,7 +136,7 @@
 
       /* TOC Active state */
       .toc-link.active {
-        color: #d97706; /* amber-600 */
+        color: #d97706;
         border-left-color: #d97706;
         font-weight: 500;
       }
@@ -179,16 +146,26 @@
       html.dark .toc-link.active {
         background-color: rgba(28, 25, 23, 0.8);
       }
+
+      /* Glassmorphism */
+      html:not(.dark) .glass {
+        background: rgba(245, 245, 244, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(217, 119, 6, 0.2);
+      }
+      html.dark .glass {
+        background: rgba(28, 25, 23, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(217, 119, 6, 0.15);
+      }
     </style>
   </head>
   <body
     class="min-h-screen flex flex-col selection:bg-amber-800 selection:text-amber-50"
   >
-    <!-- Navbar -->
     <nav
       class="w-full py-4 px-6 sm:px-12 flex justify-between items-center glass sticky top-0 z-50 border-b border-stone-300 dark:border-stone-800/50 transition-colors"
     >
-      <!-- Logo -->
       <div
         class="text-xl sm:text-2xl font-bold tracking-wide flex items-center gap-2 heading-font cursor-pointer"
         onclick="window.scrollTo(0, 0)"
@@ -199,7 +176,6 @@
         TÂM<span class="text-stone-500">THỨC</span>
       </div>
 
-      <!-- Links & Theme Toggle Right Side -->
       <div class="flex items-center gap-4 sm:gap-8">
         <div
           class="hidden sm:flex gap-8 text-sm italic text-stone-600 dark:text-stone-400"
@@ -216,7 +192,6 @@
           >
         </div>
 
-        <!-- Theme Toggle Button -->
         <button
           onclick="toggleTheme()"
           class="w-10 h-10 rounded-full flex items-center justify-center bg-transparent border border-stone-300 dark:border-stone-700 text-stone-500 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-800 hover:text-amber-600 dark:hover:text-amber-500 transition-all duration-300 shadow-sm"
@@ -227,9 +202,7 @@
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="flex-grow flex flex-col items-center w-full">
-      <!-- Hero Section -->
+    <main class="flex-grow flex flex-col items-center w-full relative">
       <section
         class="w-full max-w-4xl pt-20 pb-12 px-4 sm:px-6 flex flex-col items-center text-center"
       >
@@ -257,17 +230,15 @@
           khóa để giải mã những quy luật sâu xa nhất của thế giới này?
         </p>
 
-        <!-- Platform Links Section -->
         <div id="listen" class="w-full max-w-4xl mt-4 mb-8 scroll-mt-24">
           <div class="text-center mb-8">
             <p
               class="text-stone-600 dark:text-stone-400 italic mb-4 transition-colors"
             >
-              Lắng nghe trọn vẹn chương này trên các nền tảng:
+              Lắng nghe trọn vẹn câu chuyện này trên các nền tảng:
             </p>
             <div class="h-[1px] w-24 bg-amber-700/50 mx-auto"></div>
           </div>
-          <!-- Sửa lại grid từ 3 cột thành 2 cột và căn giữa (max-w-2xl mx-auto) -->
           <div
             class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto"
           >
@@ -315,12 +286,10 @@
         </div>
       </section>
 
-      <!-- Interactive Reader Section -->
       <section
         id="reader-section"
-        class="w-full max-w-6xl px-4 sm:px-6 lg:px-8 pb-24 scroll-mt-24 flex flex-col md:flex-row gap-8 items-start"
+        class="w-full max-w-6xl px-4 sm:px-6 lg:px-8 pb-24 scroll-mt-24 flex flex-col md:flex-row gap-8 items-start relative"
       >
-        <!-- Table of Contents (Sidebar) -->
         <aside
           class="w-full md:w-1/4 glass p-6 rounded-xl border border-stone-300 dark:border-stone-800 md:sticky md:top-24 z-40 transition-colors"
         >
@@ -387,12 +356,10 @@
           </nav>
         </aside>
 
-        <!-- Main Reading Content -->
         <div
           class="w-full md:w-3/4 text-stone-800 dark:text-stone-300 text-lg leading-loose bg-stone-50/80 dark:bg-stone-900/30 p-6 md:p-10 rounded-xl border border-stone-300 dark:border-stone-800/50 shadow-xl transition-colors scroll-mt-24"
           id="story-container"
         >
-          <!-- Phần 1 -->
           <article id="chapter-1" class="chapter-content active">
             <div class="text-center mb-8">
               <h2
@@ -406,7 +373,6 @@
               >
             </div>
 
-            <!-- AUDIO PLAYER CHO PHẦN 1 -->
             <div
               class="w-full bg-stone-100 dark:bg-stone-950 border border-amber-600/30 dark:border-amber-900/30 rounded-xl p-4 mb-10 shadow-lg flex flex-col gap-3 transition-colors"
             >
@@ -433,8 +399,8 @@
               trọng hơn: ông nội đã mua bánh tráng nướng chưa?
             </p>
             <p class="mb-6">
-              "Con thích về quê không?" — mẹ bất chợt hỏi, không nhìn lên khỏi
-              tờ báo.
+              "Con thích về quê không?" mẹ bất chợt hỏi, không nhìn lên khỏi tờ
+              báo.
             </p>
             <p class="mb-6">
               "Thích," Triết đáp. Rồi cậu nghĩ thêm một giây. "Nhưng ở quê không
@@ -495,7 +461,6 @@
             <p class="mb-6">Mùa hè bắt đầu.</p>
           </article>
 
-          <!-- Phần 2 -->
           <article id="chapter-2" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -509,7 +474,6 @@
               >
             </div>
 
-            <!-- AUDIO PLAYER CHO PHẦN 2 -->
             <div
               class="w-full bg-stone-100 dark:bg-stone-950 border border-amber-600/30 dark:border-amber-900/30 rounded-xl p-4 mb-10 shadow-lg flex flex-col gap-3 transition-colors"
             >
@@ -660,7 +624,6 @@
             </div>
           </article>
 
-          <!-- Phần 3 -->
           <article id="chapter-3" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -674,7 +637,6 @@
               >
             </div>
 
-            <!-- AUDIO PLAYER CHO PHẦN 3 -->
             <div
               class="w-full bg-stone-100 dark:bg-stone-950 border border-amber-600/30 dark:border-amber-900/30 rounded-xl p-4 mb-10 shadow-lg flex flex-col gap-3 transition-colors"
             >
@@ -823,7 +785,6 @@
             </div>
           </article>
 
-          <!-- Phần 4 -->
           <article id="chapter-4" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -837,7 +798,6 @@
               >
             </div>
 
-            <!-- AUDIO PLAYER CHO PHẦN 4 -->
             <div
               class="w-full bg-stone-100 dark:bg-stone-950 border border-amber-600/30 dark:border-amber-900/30 rounded-xl p-4 mb-10 shadow-lg flex flex-col gap-3 transition-colors"
             >
@@ -847,7 +807,7 @@
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
               <audio controls class="custom-audio" id="audio-4">
-                <source src="#" type="audio/mpeg" />
+                <source src="audio/past4.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
             </div>
@@ -866,10 +826,11 @@
               bờ, cuộn quần lên đến gối, thả chân xuống dòng nước mát.
             </p>
             <p class="mb-6">
-              "Ông không tắm?" Triết ngoi lên hỏi, tóc dính bết vào trán.
+              "Ông ơi, ông không tắm ạ?" Triết ngoi lên hỏi, tóc dính bết vào
+              trán.
             </p>
             <p class="mb-6">
-              "Ông ngồi đây nhìn con. Già rồi tắm sông thì bị cảm."
+              "Ông ngồi đây nhìn con. Già rồi tắm sông dễ bị cảm."
             </p>
             <p class="mb-6">"Hồi nhỏ ông có hay ra đây không?"</p>
             <p class="mb-6">
@@ -904,11 +865,11 @@
               ông người Hy Lạp cổ đại — ông ta nói: không ai tắm hai lần trên
               cùng một dòng sông."
             </p>
-            <p class="mb-6">"Vì nước đã khác rồi?"</p>
+            <p class="mb-6">"Vì nước đã khác rồi phải không ạ?"</p>
             <p class="mb-6">
               "Và người cũng đã khác rồi. Con của một giây trước và con của bây
-              giờ — về mặt kỹ thuật — là hai người khác nhau. Tế bào đang thay
-              đổi, suy nghĩ đang thay đổi, cơ thể đang lớn lên từng phút."
+              giờ là hai người khác nhau. Tế bào đang thay đổi, suy nghĩ đang
+              thay đổi, cơ thể đang lớn lên từng phút."
             </p>
             <p class="mb-6">
               Triết nhìn đôi bàn tay mình dưới nước. "Vậy... hôm qua con nói dối
@@ -923,7 +884,7 @@
               một lòng sông, về cùng một hướng."
             </p>
             <p class="mb-6">
-              "Vậy con vẫn phải xin lỗi ông vì chuyện hôm qua."
+              "Vậy con vẫn phải xin lỗi ông vì chuyện hôm qua ạ."
             </p>
             <p class="mb-6">"Đúng vậy."</p>
             <p class="mb-6">
@@ -971,9 +932,17 @@
                   Đứng im chỉ là tạm thời. Vận động mới là bản chất thật sự.
                 </p>
                 <p>
-                  Và đứa bé tám tuổi còn tự tìm ra điều Heraclitus không viết:
-                  rằng nếu mọi thứ đều thay đổi, thì ta vẫn phải chịu trách
-                  nhiệm.
+                  Nhưng Triết không chỉ hỏi. cháu còn xin lỗi ông về chuyện giấu
+                  cơm. Tự mình đi xin lỗi, không ai nhắc.
+                </p>
+                <p>
+                  Heraclitus nói mọi thứ đều thay đổi. Nhưng ông ấy không nói:
+                  Dù ta thay đổi mỗi ngày, ta vẫn là người phải chịu trách nhiệm
+                  cho những gì mình đã làm hôm qua.
+                </p>
+                <p>
+                  Triết tám tuổi đã hiểu điều đó. Không phải bằng lý luận, mà
+                  bằng đôi chân tự bước lại chỗ ông và nói lời xin lỗi.
                 </p>
                 <p>
                   Dù mọi thứ đều thay đổi, vẫn có một cái gì đó chạy xuyên suốt
@@ -984,7 +953,6 @@
             </div>
           </article>
 
-          <!-- Phần 5 -->
           <article id="chapter-5" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -998,7 +966,6 @@
               >
             </div>
 
-            <!-- AUDIO PLAYER CHO PHẦN 5 -->
             <div
               class="w-full bg-stone-100 dark:bg-stone-950 border border-amber-600/30 dark:border-amber-900/30 rounded-xl p-4 mb-10 shadow-lg flex flex-col gap-3 transition-colors"
             >
@@ -1008,7 +975,7 @@
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
               <audio controls class="custom-audio" id="audio-5">
-                <source src="#" type="audio/mpeg" />
+                <source src="audio/past5.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
             </div>
@@ -1035,7 +1002,7 @@
             <p class="mb-6">"Ông hay phải nói 'ừ thì cũng có lý' lắm."</p>
             <p class="mb-6">
               Ông nội im lặng một lúc, rồi cười khẽ. "Thông minh. Nhưng đó không
-              phải thua — đó là thay đổi ý kiến vì có lý do tốt. Khác nhau."
+              phải thua — đó là thay đổi ý kiến vì có lý do tốt."
             </p>
             <p class="mb-6">
               Hôm đó trời nắng to, hai ông cháu ra vườn làm cỏ. Triết cầm cái
@@ -1049,7 +1016,7 @@
             <p class="mb-6">
               Ông nội nhìn xuống. Cán gỗ nứt một đường dài, sắp gãy.
             </p>
-            <p class="mb-6">"Lại rồi," ông nói, không có vẻ bực bội lắm.</p>
+            <p class="mb-6">"Lại nữa rồi," ông nói, không có vẻ bực bội lắm.</p>
             <p class="mb-6">
               "Ông mới thay hồi đầu mùa mà," Triết nói, nhìn vết nứt.
             </p>
@@ -1064,7 +1031,7 @@
               trong nó đang có hai thứ chiến đấu với nhau."
             </p>
             <p class="mb-6">
-              Triết nhìn vết nứt, chưa hiểu ý ông. "Hai thứ là gì?"
+              Triết nhìn vết nứt, chưa hiểu ý ông. "Hai thứ gì ạ?"
             </p>
             <p class="mb-6">
               "Sức chịu đựng của gỗ — gỗ muốn giữ nguyên hình dạng. Và sức tác
@@ -1087,17 +1054,17 @@
               va chạm thì chỉ có một ý kiến duy nhất đứng im mãi mãi. Mà một ý
               kiến đứng im thì không lớn lên được."
             </p>
-            <p class="mb-6">"Như nước không đun thì không sôi?"</p>
+            <p class="mb-6">"Như nước không đun thì không sôi ạ?"</p>
             <p class="mb-6">
               Ông nội nhìn cháu bằng ánh mắt mà Triết bắt đầu quen — ngạc nhiên
               pha lẫn hài lòng. "Đúng. Con đang tự kết nối các bài học rồi đó."
             </p>
             <p class="mb-6">
-              Họ mang chiếc cuốc vào nhà kho. Ông nội lấy một khúc gỗ đã ngâm
-              lâu ngày — cứng hơn, không nứt nẻ khi nắng — và bắt đầu đẽo cán
-              mới. Triết ngồi bên cạnh, không nói gì, chỉ nhìn bàn tay ông làm
-              việc — những ngón tay nhăn nheo nhưng chắc chắn, biết chính xác
-              cần đẽo bao nhiêu, cần để lại bao nhiêu.
+              Họ mang chiếc cuốc vào nhà kho. Ông nội lấy một khúc gỗ đã phơi
+              khô lâu ngày — cứng hơn, không nứt nẻ khi nắng — và bắt đầu đẽo
+              cán mới. Triết ngồi bên cạnh, không nói gì, chỉ nhìn bàn tay ông
+              làm việc — những ngón tay nhăn nheo nhưng chắc chắn, biết chính
+              xác cần đẽo bao nhiêu, cần để lại bao nhiêu.
             </p>
             <p class="mb-6">
               Cái cán mới sẽ tốt hơn cái cũ. Không phải vì cái cũ xấu — mà vì nó
@@ -1143,7 +1110,6 @@
             </div>
           </article>
 
-          <!-- Phần 6 -->
           <article id="chapter-6" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -1157,7 +1123,6 @@
               >
             </div>
 
-            <!-- AUDIO PLAYER CHO PHẦN 6 -->
             <div
               class="w-full bg-stone-100 dark:bg-stone-950 border border-amber-600/30 dark:border-amber-900/30 rounded-xl p-4 mb-10 shadow-lg flex flex-col gap-3 transition-colors"
             >
@@ -1167,7 +1132,7 @@
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
               <audio controls class="custom-audio" id="audio-6">
-                <source src="#" type="audio/mpeg" />
+                <source src="audio/past6.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
             </div>
@@ -1185,21 +1150,21 @@
               "Cám bị bệnh hả ông?" Triết hỏi, lo lắng ngồi xuống cạnh Cám.
             </p>
             <p class="mb-6">"Không. Già thôi."</p>
-            <p class="mb-6">"Già thì sao?"</p>
+            <p class="mb-6">"Già thì sao ạ?"</p>
             <p class="mb-6">
-              Ông nội ngồi xuống cạnh hai đứa — một đứa người, một đứa chó. "Già
-              thì đến lúc đi thôi cháu ạ."
+              Ông nội ngồi xuống cạnh hai đứa — một người, một chó. "Già thì đến
+              lúc đi thôi cháu ạ."
             </p>
             <p class="mb-6">
               Triết không nói gì. Tay vẫn xoa Cám. Cám thở đều đều, ấm áp.
             </p>
             <p class="mb-6">
-              "Cám chưa chết ngay đâu," ông nội bổ sung. "Nhưng ông muốn cháu
-              biết trước."
+              "Cám chưa đi ngay đâu," ông nội bổ sung. "Nhưng ông muốn cháu biết
+              trước."
             </p>
             <p class="mb-6">Cả ngày hôm đó Triết ít nói hơn thường lệ.</p>
             <p class="mb-6">
-              Chiều hôm đó, để cháu khuây khỏa, ông nội rủ Triết ra vườn sau
+              Chiều hôm đó, để cho cháu vui lại, ông nội rủ Triết ra vườn sau
               gieo đậu. Đây là khoảnh đất nhỏ ông để riêng cho Triết — từ năm
               ngoái cậu đã xin được tự gieo một luống rau, và năm nay ông mua
               hạt đậu cô ve về cho cậu.
@@ -1210,10 +1175,10 @@
             </p>
             <p class="mb-6">
               "Mình chôn nó vào đất," Triết nói, giọng hơi buồn. "Nó không ngợp
-              à?"
+              ạ?"
             </p>
             <p class="mb-6">"Không. Nó ngủ."</p>
-            <p class="mb-6">"Bao giờ dậy?"</p>
+            <p class="mb-6">"Bao giờ nó sẽ dậy ạ?"</p>
             <p class="mb-6">
               "Vài ngày. Khi đủ ẩm, đủ ấm, nó sẽ nứt ra và mầm sẽ chui lên."
             </p>
@@ -1228,11 +1193,11 @@
             </p>
             <p class="mb-6">
               Triết ngồi im. Rồi cậu hỏi, giọng rất nhỏ: "Cám già đi rồi mất —
-              thì Cám trở thành gì?"
+              thì Cám trở thành gì ạ?"
             </p>
             <p class="mb-6">
               Ông nội không trả lời ngay. Ông nhìn ra vườn, nhìn lên trời, nhìn
-              vào khoảnh sân nơi Cám đang nằm ngủ.
+              vào khoảng sân nơi Cám đang nằm ngủ.
             </p>
             <p class="mb-6">
               "Cám trở thành ký ức của tất cả những người đã yêu thương nó. Trở
@@ -1250,7 +1215,7 @@
               Triết đã gieo. Cậu chạy ra sân gọi to: "Ông ơi! Đậu lên rồi!" —
               giọng vui mừng như thể đây là lần đầu tiên mầm cây mọc trên đời.
               Ông nội ra xem, gật gù, và cả hai đứng nhìn những chồi xanh nhỏ
-              xíu vươn lên trong nắng sớm, Cám nằm bên cạnh, mắt nhắm, vẫy đuôi
+              xíu vươn lên trong nắng sớm. Cám nằm bên cạnh, mắt nhắm, vẫy đuôi
               chậm rãi.
             </p>
 
@@ -1287,12 +1252,11 @@
                   Nhưng với câu hỏi của Triết — Cám trở thành gì — ông trả lời
                   bằng tình cảm, không bằng Triết học.
                 </p>
-                <p>Đôi khi đó mới là câu trả lời đúng nhất.</p>
+                <p>Đôi khi. Đó mới là câu trả lời đúng nhất.</p>
               </div>
             </div>
           </article>
 
-          <!-- Phần 7 -->
           <article id="chapter-7" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -1315,7 +1279,7 @@
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
               <audio controls class="custom-audio" id="audio-7">
-                <source src="#" type="audio/mpeg" />
+                <source src="audio/past7.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
             </div>
@@ -1343,13 +1307,13 @@
               quyết đoán.
             </p>
             <p class="mb-6">"Ông ơi!" Triết kêu lên.</p>
-            <p class="mb-6">"Áo mưa ra mặc đi."</p>
+            <p class="mb-6">"Lấy áo mưa ra mặc đi."</p>
             <p class="mb-6">
               Triết móc áo mưa ra mặc, tay run run vì lạnh. Ông nội từ tốn mặc
               áo mưa của mình — cái áo mưa xanh đã bạc màu, vá một miếng ở vai.
             </p>
             <p class="mb-6">
-              "Ông biết trước à?" Triết hỏi, giọng có phần phục.
+              "Ông biết trước ạ?" Triết hỏi, giọng có phần phục.
             </p>
             <p class="mb-6">
               "Ông biết hôm nay có mưa rào. Không biết mưa lúc mấy giờ."
@@ -1376,10 +1340,9 @@
               co rúm lại. Tiếng sét đánh một giây sau, ì ầm vang dội.
             </p>
             <p class="mb-6">
-              "Cái sét kia," ông nội chỉ tay, "đánh đúng ngọn cây gòn kia
-              không?"
+              "Cái sét kia," ông nội chỉ tay, "đánh đúng gốc cây đa kia không?"
             </p>
-            <p class="mb-6">"Không biết."</p>
+            <p class="mb-6">"Con không biết."</p>
             <p class="mb-6">
               "Không ai biết. Sét có thể đánh ở đây, ở kia, hay không đánh đâu
               hết. Đó là ngẫu nhiên thực sự — không có quy luật nào giải thích
@@ -1399,11 +1362,11 @@
               mướt hơn, không khí mát lạnh và thơm mùi đất ướt.
             </p>
             <p class="mb-6">
-              "Ông ơi, cái sét đó không đánh cây gòn. Nó đánh đồng không kìa."
+              "Ông ơi, cái sét đó không đánh cây đa. Nó đánh ngoài đồng kìa."
             </p>
             <p class="mb-6">
               Ông nội nhìn theo ngón tay Triết chỉ. Cách họ chừng ba trăm mét,
-              một mảng đất nhỏ đang bốc khói mỏng.
+              một mảnh đất nhỏ đang bốc khói mỏng.
             </p>
             <p class="mb-6">"Ừ. Ngẫu nhiên," ông nói.</p>
 
@@ -1423,8 +1386,10 @@
                 class="font-serif italic text-stone-700 dark:text-stone-400 space-y-4 transition-colors"
               >
                 <p>Cuối tháng bảy — mưa rào và bài học về áo mưa.</p>
-                <p>Triết hỏi: làm sao sống được khi có những thứ ngẫu nhiên?</p>
-                <p>Câu hỏi đó hay hơn câu hỏi ông đã chuẩn bị để hỏi cháu.</p>
+                <p>
+                  Triết hỏi: làm sao sống được khi có những thứ ngẫu nhiên? Câu
+                  hỏi này hay.
+                </p>
                 <p>Có những thứ tất nhiên — quy luật, mùa vụ, nhân quả.</p>
                 <p>
                   Có những thứ ngẫu nhiên — cái sét đánh đúng cây đó, giây đó.
@@ -1438,7 +1403,6 @@
             </div>
           </article>
 
-          <!-- Phần 8 -->
           <article id="chapter-8" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -1461,7 +1425,7 @@
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
               <audio controls class="custom-audio" id="audio-8">
-                <source src="#" type="audio/mpeg" />
+                <source src="audio/past8.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
             </div>
@@ -1494,7 +1458,7 @@
             <p class="mb-6">
               Bác Hiền bước ra, tay cầm chén trà. "Câu được chưa?"
             </p>
-            <p class="mb-6">"Chưa."</p>
+            <p class="mb-6">"Chưa ạ."</p>
             <p class="mb-6">
               Bác ngồi xuống cạnh Triết, nhìn mặt ao. "Cháu đọc sách câu cá của
               ông Bảy hả?"
@@ -1508,7 +1472,7 @@
               Triết bật cười dù đang bực. Ông nội từ đằng sau đi lại, ngồi xuống
               bên cạnh.
             </p>
-            <p class="mb-6">"Cháu làm gì sai?" ông nội hỏi.</p>
+            <p class="mb-6">"Cháu làm gì sai à?" ông nội hỏi.</p>
             <p class="mb-6">
               "Con không biết. Con làm đúng theo sách hết rồi."
             </p>
@@ -1541,7 +1505,7 @@
               Triết nhìn Bác Hiền, rồi nhìn ông nội. Ông nội nhìn lại cháu với
               vẻ mặt nói rõ: đó chính là điều ông vừa nói.
             </p>
-            <p class="mb-6">"Cho con thử lại," Triết nói.</p>
+            <p class="mb-6">"Cho con thử lại với," Triết nói.</p>
             <p class="mb-6">
               Lần này cậu không nhìn cần. Cậu nhìn ra nơi khác — một con cò
               trắng đang đứng bờ đối diện, bất động như tượng đá. Tay cậu cầm
@@ -1603,7 +1567,7 @@
                   tay cảm nhận.
                 </p>
                 <p>
-                  Triết hiểu điều này khi con cá nhỏ vẫy đuôi trong tay cậu.
+                  Triết hiểu điều này khi con cá nhỏ vẫy đuôi trong tay cháu.
                 </p>
                 <p>Không ai giải thích được khoảnh khắc đó.</p>
                 <p>Đó chính là điểm Triết học gặp gỡ cuộc sống.</p>
@@ -1611,7 +1575,6 @@
             </div>
           </article>
 
-          <!-- Phần 9 (Cuối) -->
           <article id="chapter-9" class="chapter-content">
             <div class="text-center mb-8">
               <h2
@@ -1634,7 +1597,7 @@
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
               <audio controls class="custom-audio" id="audio-9">
-                <source src="#" type="audio/mpeg" />
+                <source src="audio/past9.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
             </div>
@@ -1822,33 +1785,45 @@
             </p>
           </article>
 
-          <!-- Navigation Buttons (Prev / Next) -->
           <div
             class="mt-12 pt-8 border-t border-stone-300 dark:border-stone-800 flex justify-between items-center font-sans transition-colors"
           >
             <button
               id="btn-prev"
               onclick="changeChapter('prev')"
-              class="px-6 py-3 bg-stone-200 dark:bg-stone-900 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 rounded-lg transition-all hover:bg-stone-300 dark:hover:bg-stone-800 hover:text-amber-600 dark:hover:text-amber-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-stone-200 dark:disabled:hover:bg-stone-900 disabled:hover:text-stone-700 dark:disabled:hover:text-stone-300 shadow-sm"
+              class="px-4 sm:px-6 py-3 bg-stone-200 dark:bg-stone-900 border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 rounded-lg transition-all hover:bg-stone-300 dark:hover:bg-stone-800 hover:text-amber-600 dark:hover:text-amber-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-stone-200 dark:disabled:hover:bg-stone-900 disabled:hover:text-stone-700 dark:disabled:hover:text-stone-300 shadow-sm flex items-center justify-center"
               disabled
             >
-              <i class="fa-solid fa-arrow-left mr-2"></i> Phần Trước
+              <i class="fa-solid fa-arrow-left"></i>
+              <span class="hidden sm:inline ml-2">Phần Trước</span>
             </button>
             <button
               id="btn-next"
               onclick="changeChapter('next')"
-              class="px-6 py-3 bg-amber-600 dark:bg-amber-700 text-stone-50 rounded-lg transition-all shadow-lg hover:bg-amber-700 dark:hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed"
+              class="px-4 sm:px-6 py-3 bg-amber-600 dark:bg-amber-700 text-stone-50 rounded-lg transition-all shadow-lg hover:bg-amber-700 dark:hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             >
-              Phần Tiếp Theo <i class="fa-solid fa-arrow-right ml-2"></i>
+              <span class="hidden sm:inline mr-2">Phần Tiếp Theo</span>
+              <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
         </div>
       </section>
+
+      <button
+        onclick="
+          document
+            .getElementById('reader-section')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+        class="md:hidden fixed bottom-6 right-6 w-12 h-12 bg-amber-600 dark:bg-amber-700 text-stone-50 rounded-full flex items-center justify-center shadow-xl hover:bg-amber-700 dark:hover:bg-amber-600 transition-all z-50 opacity-90"
+        title="Lên Mục Lục"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
     </main>
 
-    <!-- Footer -->
     <footer
-      class="w-full bg-stone-200 dark:bg-stone-950 py-8 flex flex-col items-center justify-center gap-3 border-t border-stone-300 dark:border-stone-900 mt-auto transition-colors"
+      class="w-full bg-stone-200 dark:bg-stone-950 py-8 flex flex-col items-center justify-center gap-3 border-t border-stone-300 dark:border-stone-900 mt-auto transition-colors relative z-10"
     >
       <p
         class="text-stone-600 dark:text-stone-500 text-sm font-serif italic transition-colors"
@@ -1856,7 +1831,6 @@
         &copy; 2026 Tâm Thức Podcast. Nơi câu chuyện là hành trình.
       </p>
 
-      <!-- GitHub Link -->
       <a
         href="https://github.com/ACETech291/PhilosophyPostcardWeb"
         target="_blank"
@@ -1870,7 +1844,6 @@
       </a>
     </footer>
 
-    <!-- JavaScript for SPA Navigation, Theme Toggle and Smart Audio -->
     <script>
       // --- THEME TOGGLE LOGIC ---
       if (localStorage.theme === "light") {
