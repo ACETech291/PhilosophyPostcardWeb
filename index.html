@@ -176,9 +176,9 @@
         TÂM<span class="text-stone-500">THỨC</span>
       </div>
 
-      <div class="flex items-center gap-4 sm:gap-8">
+      <div class="flex items-center gap-4 sm:gap-6">
         <div
-          class="hidden sm:flex gap-8 text-sm italic text-stone-600 dark:text-stone-400"
+          class="hidden sm:flex gap-8 text-sm italic text-stone-600 dark:text-stone-400 mr-2"
         >
           <a
             href="#listen"
@@ -191,6 +191,15 @@
             >Đọc & Nghe Sách</a
           >
         </div>
+
+        <button
+          id="speed-btn"
+          onclick="togglePlaybackSpeed()"
+          class="w-[60px] h-10 rounded-full flex items-center justify-center bg-stone-200/50 dark:bg-stone-800/50 border border-stone-300 dark:border-stone-700 text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 hover:text-amber-600 dark:hover:text-amber-500 transition-all duration-300 shadow-sm text-sm font-semibold font-sans"
+          title="Thay đổi tốc độ phát (Audio)"
+        >
+          1.0x
+        </button>
 
         <button
           onclick="toggleTheme()"
@@ -420,7 +429,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-2">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-2"
+              >
                 <source src="audio/past1.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -525,7 +540,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-3">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-3"
+              >
                 <source src="audio/past2.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -714,7 +735,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-4">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-4"
+              >
                 <source src="audio/past3.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -875,7 +902,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-5">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-5"
+              >
                 <source src="audio/past4.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -1049,7 +1082,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-6">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-6"
+              >
                 <source src="audio/past5.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -1206,7 +1245,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-7">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-7"
+              >
                 <source src="audio/past6.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -1353,7 +1398,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-8">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-8"
+              >
                 <source src="audio/past7.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -1499,7 +1550,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-9">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-9"
+              >
                 <source src="audio/past8.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -1669,7 +1726,13 @@
               >
                 <i class="fa-solid fa-headphones"></i> Nghe Audio Phần Này
               </div>
-              <audio controls class="custom-audio" id="audio-10">
+              <audio
+                controls
+                controlsList="nodownload"
+                oncontextmenu="return false;"
+                class="custom-audio"
+                id="audio-10"
+              >
                 <source src="audio/past9.mp3" type="audio/mpeg" />
                 Trình duyệt của bạn không hỗ trợ thẻ audio.
               </audio>
@@ -1845,7 +1908,7 @@
               Cậu bỗng nhớ lại buổi sáng đầu tiên ở vườn ông — lúc ông hỏi "Cháu
               có biết tên mình có nghĩa gì không?" và cậu chỉ nghĩ đến chuyện mẹ
               hay bảo mình lắm chuyện. Hồi đó cậu không hiểu ông nội muốn nói
-              gì.
+              gỉ.
             </p>
             <p class="mb-6">Bây giờ thì hiểu rồi.</p>
             <p class="mb-6">
@@ -1994,6 +2057,42 @@
 
       window.addEventListener("DOMContentLoaded", updateThemeIcon);
 
+      // --- PLAYBACK SPEED CONTROL LOGIC ---
+      const speeds = [0.75, 1.0, 1.25, 1.5, 2.0];
+      let speedIndex = 1; // Default to 1.0x
+
+      // Restore speed from localStorage if available
+      if (localStorage.playbackSpeed) {
+        const savedSpeed = parseFloat(localStorage.playbackSpeed);
+        const idx = speeds.indexOf(savedSpeed);
+        if (idx !== -1) speedIndex = idx;
+      }
+
+      function applySpeedToAll() {
+        const speed = speeds[speedIndex];
+
+        // Apply to all audio tags
+        document.querySelectorAll("audio.custom-audio").forEach((audio) => {
+          audio.playbackRate = speed;
+        });
+
+        // Update button text
+        const speedBtn = document.getElementById("speed-btn");
+        if (speedBtn) {
+          // Format text: e.g., 1 -> 1.0x, 1.5 -> 1.5x
+          speedBtn.innerText = speed % 1 === 0 ? speed + ".0x" : speed + "x";
+        }
+      }
+
+      function togglePlaybackSpeed() {
+        speedIndex = (speedIndex + 1) % speeds.length;
+        localStorage.setItem("playbackSpeed", speeds[speedIndex]);
+        applySpeedToAll();
+      }
+
+      // Apply initial speed on load
+      window.addEventListener("DOMContentLoaded", applySpeedToAll);
+
       // --- CHAPTER NAVIGATION & SMART AUDIO LOGIC ---
       let currentChapter = 1;
       const totalChapters = 11; // Đã cập nhật lên 11 phần (bao gồm Giới thiệu và Lời Cảm Ơn)
@@ -2046,6 +2145,9 @@
             ? document.getElementById("story-container")
             : document.getElementById("reader-section");
         scrollTarget.scrollIntoView({ behavior: "smooth" });
+
+        // Đảm bảo tốc độ vẫn được duy trì khi chuyển chương
+        applySpeedToAll();
 
         // Tự động phát âm thanh nếu được yêu cầu (nhờ người nghe audio tự chạy xong)
         if (autoPlayNext) {
